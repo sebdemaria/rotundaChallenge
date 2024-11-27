@@ -1,5 +1,9 @@
 import { Zoo } from "../../controllers/Zoo.js";
-import { capitalizeFirstLetter } from "../../utils/utils.js";
+import {
+    capitalizeFirstLetter,
+    setFeedbackMessage,
+    toggleErrorClass,
+} from "../../utils/utils.js";
 import { FORMS } from "../../consts/consts.js";
 
 let zoo = new Zoo();
@@ -9,31 +13,8 @@ const inputText = document.getElementById("inputText");
 const outputDiv = document.getElementById("outputDiv");
 const outputText = document.getElementById("outputText");
 const outputTitle = document.getElementById("outputTitle");
-const animalSpeakErrorMsg = document.getElementById("animal-speak-error-msg");
-const animalAddErrorMsg = document.getElementById("animal-add-error-msg");
-const feedbackMsg = document.getElementById("process-feedback-msg");
 const nameInput = document.getElementById("newAnimalName");
 const soundInput = document.getElementById("newAnimalSound");
-
-function setFeedbackMessage(message, form = "") {
-    switch (form) {
-        case FORMS.ADD:
-            animalAddErrorMsg.textContent = message;
-            break;
-        case FORMS.SPEAK:
-            animalSpeakErrorMsg.textContent = message;
-            break;
-
-        default:
-            feedbackMsg.textContent = message;
-            break;
-    }
-}
-
-function toggleErrorClass(element, hasError) {
-    element.classList.toggle("input-common", !hasError);
-    element.classList.toggle("input-err", hasError);
-}
 
 function generateAnimalButtons() {
     btnContainer.innerHTML = "";
