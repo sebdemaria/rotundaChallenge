@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/styles/zoo.css" />
+        <title>Rotunda Zoo</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="./public/images/zoo.webp" alt="Zoo illustration" />
+            <h1>Rotunda Zoo</h1>
+            <p>Add animals to the zoo and make them speak!</p>
+        </header>
+
+        <main>
+            <section id="animalMsgSection">
+                <h2 id="add-animal-title">Make an animal speak!</h2>
+
+                <label for="inputText">Animal Message</label>
+                <input
+                    autocomplete="off"
+                    type="text"
+                    class="input-common"
+                    id="inputText"
+                    placeholder="Enter your text here..."
+                />
+                <p class="animal-error-msg" id="animal-speak-error-msg"></p>
+
+                <div id="animalButtons" class="buttons"></div>
+            </section>
+
+            <section id="addAnimalSection" aria-labelledby="add-animal-title">
+                <h2 id="add-animal-title">Add a new animal</h2>
+
+                <form novalidate id="animalForm">
+                    <label for="newAnimalName">Animal Name</label>
+                    <input
+                        autocomplete="off"
+                        type="text"
+                        class="input-common"
+                        id="newAnimalName"
+                        placeholder="Animal name"
+                        required
+                    />
+
+                    <label for="newAnimalSound">Animal Sound</label>
+                    <input
+                        autocomplete="off"
+                        type="text"
+                        class="input-common"
+                        id="newAnimalSound"
+                        placeholder="Animal sound"
+                        required
+                    />
+
+                    <p class="animal-error-msg" id="animal-add-error-msg"></p>
+
+                    <button class="btn-submit" type="submit">Add Animal</button>
+
+                    <p id="process-feedback-msg"></p>
+                </form>
+            </section>
+
+            <section id="outputDiv" aria-labelledby="output-title">
+                <h2 id="outputTitle">Animal Says:</h2>
+                <p id="outputText">...</p>
+            </section>
+        </main>
+
+        <script type="module" src="../public/js/zoo.js"></script>
+    </body>
+</html>
