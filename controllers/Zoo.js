@@ -4,7 +4,7 @@ export class Zoo {
     constructor() {
         this.animals = {
             lion: new Animal("lion", "roar"),
-            tiger: new Animal("tiger", "grrr")
+            tiger: new Animal("tiger", "grrr"),
         };
     }
 

@@ -14,27 +14,29 @@
         </header>
 
         <main>
-            <section>
-                <label for="inputText">Animal Message:</label>
+            <section id="animalMsgSection">
+                <h2 id="add-animal-title">Make an animal speak!</h2>
+
+                <label for="inputText">Animal Message</label>
                 <input
+                    autocomplete="off"
                     type="text"
                     class="input-common"
                     id="inputText"
                     placeholder="Enter your text here..."
                 />
-            </section>
+                <p class="animal-error-msg" id="animal-speak-error-msg"></p>
 
-            <section id="animalButtons" aria-labelledby="animal-buttons-title">
-                <h2 id="animal-buttons-title">Animal Buttons</h2>
                 <div id="animalButtons" class="buttons"></div>
             </section>
 
-            <section aria-labelledby="add-animal-title">
-                <h2 id="add-animal-title">Add a New Animal</h2>
+            <section id="addAnimalSection" aria-labelledby="add-animal-title">
+                <h2 id="add-animal-title">Add a new animal</h2>
 
-                <form novalidate onsubmit="handleAddAnimal()">
-                    <label for="newAnimalName">Animal Name:</label>
+                <form novalidate id="animalForm">
+                    <label for="newAnimalName">Animal Name</label>
                     <input
+                        autocomplete="off"
                         type="text"
                         class="input-common"
                         id="newAnimalName"
@@ -42,8 +44,9 @@
                         required
                     />
 
-                    <label for="newAnimalSound">Animal Sound:</label>
+                    <label for="newAnimalSound">Animal Sound</label>
                     <input
+                        autocomplete="off"
                         type="text"
                         class="input-common"
                         id="newAnimalSound"
@@ -51,16 +54,18 @@
                         required
                     />
 
+                    <p class="animal-error-msg" id="animal-add-error-msg"></p>
+
                     <button class="btn-submit" type="submit">Add Animal</button>
+
+                    <p id="process-feedback-msg"></p>
                 </form>
             </section>
 
             <section id="outputDiv" aria-labelledby="output-title">
-                <h2 id="output-title">Animal Says:</h2>
+                <h2 id="outputTitle">Animal Says:</h2>
                 <p id="outputText">...</p>
             </section>
-
-            <p id="process-feedback-msg"></p>
         </main>
 
         <script type="module" src="../public/js/zoo.js"></script>
