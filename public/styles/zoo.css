@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;    
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+h1,
+p,
+input {
+    width: 100%;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 30%
+}
+
+button {
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: 0.2s ease-in-out background-color;
+}
+
+input {
+    background-color: transparent;
+    border: 1.5px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: 0.2s ease-in-out background-color;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: rgb(50, 53, 54, 0.2);
+    }
+}
+
+.input-common {
+    border-color: rgb(50, 53, 54);
+}
+
+.input-err {
+    border-color: red;
+}
+
+.btn-animal {
+    border: 1.5px solid rgb(24, 123, 194);
+    &:hover {
+        background-color: rgb(24, 123, 194, 0.5);
+    }
+}
+
+.btn-submit {
+    border: 1.5px solid rgb(50, 158, 93);
+    &:hover {
+        background-color: rgb(50, 158, 93, 0.5);
+    }
+}
+
+.header{
+    img {
+        width: 400px;
+    }
+}
+
+main {
+    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3em;
+
+    #animalButtons {
+        display: flex;
+        gap: 0.5em;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .add-animal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+        margin-top: 2em;
+    }
+
+    #outputDiv {
+        display: none;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+        margin-top: 2em;
+    }
+}
