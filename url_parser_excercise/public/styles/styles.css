@@ -1,0 +1,95 @@
+:root {
+    --border-radius: 10px;
+    --border-width: 1.5px;
+    --color-background: #f4f4f9;
+    --color-error: red;
+    --color-border: rgb(50, 53, 54);
+    --color-button-submit: rgb(50, 158, 93);
+    --color-hover-overlay: rgba(50, 53, 54, 0.2);
+    --color-hover-submit: rgba(50, 158, 93, 0.5);
+    --font-family: Arial, sans-serif;
+    --spacing-gap: 1em;
+    --spacing-padding: 8px 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: var(--color-background);
+    display: flex;
+    font-family: var(--font-family);
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    align-items: center;
+    background: white;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap);
+    padding: 2em;
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+input[type="text"] {
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    max-width: 300px;
+    min-width: 90%;
+    padding: var(--spacing-padding);
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"]:hover {
+    background-color: var(--color-hover-overlay);
+}
+
+p {
+    color: var(--color-border);
+    font-size: 1rem;
+    text-align: center;
+}
+
+#error-msg {
+    color: var(--color-error);
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: var(--spacing-padding);
+    transition: 0.2s ease-in-out background-color;
+}
+
+.btn-submit {
+    border-color: var(--color-button-submit);
+
+    &:hover {
+        background-color: var(--color-hover-submit);
+    }
+}
