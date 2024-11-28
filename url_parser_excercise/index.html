@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>URL parser</title>
+        <link rel="stylesheet" href="./public/styles/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>URL parser</h1>
+
+            <form id="url_form">
+                <input
+                    type="text"
+                    id="urlFormatInput"
+                    value="/:version/api/:collection/:id"
+                    placeholder="Type the url to parse..."
+                />
+
+                <input
+                    type="text"
+                    id="urlValueInput"
+                    value="/6/api/listings/3?sort=desc&limit=10"
+                    placeholder="Type the url to parse..."
+                />
+
+                <button class="btn-submit" type="submit">Parse URL</button>
+            </form>
+            
+            <p id="error-msg"></p>
+
+            <p id="result"></p>
+        </div>
+
+        <script type="module" src="./public/js/parser.js"></script>
+    </body>
+</html>

@@ -1,0 +1,211 @@
+:root {
+    --color-background: #f4f4f9;
+    --color-border: rgb(50, 53, 54);
+    --color-border-error: red;
+    --color-button-animal: rgb(24, 123, 194);
+    --color-button-submit: rgb(50, 158, 93);
+    --color-hover-overlay: rgba(50, 53, 54, 0.2);
+    --color-hover-animal: rgba(24, 123, 194, 0.5);
+    --color-hover-submit: rgba(50, 158, 93, 0.5);
+
+    --font-family: Roboto, sans-serif;
+    --font-size-label: 0.9rem;
+
+    --spacing-gap: 1em;
+    --spacing-padding: 8px 15px;
+
+    --border-radius: 10px;
+    --border-width: 1.5px;
+
+    /* --breakpoint-xxs: 0em;  0px */
+    /* --breakpoint-xs: 20em;  320px */
+    /* --breakpoint-sm: 30em;  480px */
+    /* --breakpoint-md: 48em;  768px */
+    /* --breakpoint-lg: 62em;  992px */
+    /* --breakpoint-xl: 80em;  1280px */
+    /* --breakpoint-xxl: 96em; 1536px */
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    height: 100vh;
+    text-align: center;
+}
+
+h1,
+h2,
+p,
+input {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+button {
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-padding);
+    border: var(--border-width) solid var(--color-border);
+    cursor: pointer;
+    transition: 0.2s ease-in-out background-color;
+}
+
+label {
+    font-size: var(--font-size-label);
+    text-align: start;
+    margin-bottom: -0.5em;
+}
+
+input {
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-padding);
+    border: var(--border-width) solid var(--color-border);
+    cursor: pointer;
+    transition: 0.2s ease-in-out background-color;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: var(--color-hover-overlay);
+    }
+}
+
+.input-common {
+    border-color: var(--color-border);
+}
+
+.input-err {
+    border-color: var(--color-border-error);
+}
+
+.btn-animal {
+    border-color: var(--color-button-animal);
+
+    &:hover {
+        background-color: var(--color-hover-animal);
+    }
+}
+
+.btn-submit {
+    border-color: var(--color-button-submit);
+
+    &:hover {
+        background-color: var(--color-hover-submit);
+    }
+}
+
+.animal-error-msg {
+    color: var(--color-border-error);
+    margin: -0.5em 0 0 0.8em;
+    text-align: start;
+    font-size: 0.9rem;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-gap);
+
+    img {
+        margin-bottom: -2em;
+        width: 400px;
+    }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin: 3em auto;
+    width: 50%;
+
+    #animalMsgSection {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        gap: var(--spacing-gap);
+        margin-top: -1em;
+
+        #animalButtons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    #addAnimalSection {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        gap: var(--spacing-gap);
+        margin-top: 2em;
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-gap);
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    #process-feedback-msg {
+        margin-top: 1em;
+    }
+
+    #outputDiv {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-gap);
+        margin-top: 0.5em;
+    }
+}
+
+@media (max-width: 80em) {
+    section {
+        width: 100%;
+    }
+
+    .header img {
+        margin-bottom: 0.1em;
+        width: 300px;
+    }
+
+    main {
+        width: 60%;
+    }
+}
+
+@media (max-width: 48em) {
+    .header img {
+        width: 200px;
+    }
+
+    main {
+        width: 80%;
+    }
+}
